@@ -1,9 +1,7 @@
-# main.py
 
 from db import initialize_database, add_record, read_all_records, update_record, delete_record
 
 def print_records(records):
-    """Print all records in a readable format."""
     for i, record in enumerate(records):
         print(f"Record {i + 1}: {record}")
 
