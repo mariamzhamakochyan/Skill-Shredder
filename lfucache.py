@@ -35,10 +35,10 @@ class LFUCache:
             self.cache[key] = [value, 1]
             self.freq[1].append(key)
             self.min_freq = 1
-lfu_cache = LFUCache(3)
-lfu_cache.put(1, 'One')
-lfu_cache.put(2, 'Two')
-lfu_cache.put(3, 'Three')
-print(lfu_cache.get(1))  # Output: 'One'
-lfu_cache.put(4, 'Four')
-print(lfu_cache.get(2)) 
+lfu = LFUCache(3)
+lfu.put(1, 'One')
+lfu.put(2, 'Two')
+lfu.put(3, 'Three')
+print(lfu.get(1))  
+lfu.put(4, 'Four')
+print(lfu.get(2)) 
