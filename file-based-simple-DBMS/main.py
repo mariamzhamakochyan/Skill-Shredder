@@ -1,4 +1,3 @@
-
 from db import initialize_database, add_record, read_all_records, update_record, delete_record
 
 def print_records(records):
