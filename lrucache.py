@@ -51,10 +51,10 @@ class LRUCache:
             new_node = Node(key, value)
             self._add_node(new_node)
             self.cache[key] = new_node
-lru_cache = LRUCache(3)
-lru_cache.put(1, 'One')
-lru_cache.put(2, 'Two')
-lru_cache.put(3, 'Three')
-print(lru_cache.get(1))  # Output: 'One'
-lru_cache.put(4, 'Four')
-print(lru_cache.get(2)) 
+lru = LRUCache(3)
+lru.put(1, 'One')
+lru.put(2, 'Two')
+lru.put(3, 'Three')
+print(lru.get(1)) 
+lru.put(4, 'Four')
+print(lru.get(2)) 
