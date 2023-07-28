@@ -3,8 +3,6 @@ import requests
 def fetch_webpage(url):
     try:
         response = requests.get(url)
-
-        # Check if the request was successful (status code 200)
         if response.status_code == 200:
             return response.text
         else:
