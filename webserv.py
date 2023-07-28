@@ -1,16 +1,13 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-# Define the request handler class
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        """Handle GET requests."""
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
         self.wfile.write(b'Skill-Shredder')
 
 def run_server():
-    """Run the HTTP server."""
     host = 'localhost'
     port = 8000
 

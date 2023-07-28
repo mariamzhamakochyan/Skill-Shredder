@@ -23,7 +23,7 @@ class ThreadPool:
                 break
             try:
                 result = task(*args, **kwargs)
-                event.set()  # Signal that the task is completed
+                event.set()  
             except Exception as e:
                 result = e
             self.task_queue.task_done()
@@ -59,6 +59,6 @@ if __name__ == "__main__":
     thread_pool.shutdown()
 
     for task_id, event in results:
-        event.wait()  # Wait for the task to complete
+        event.wait()  
         print(f"Task {task_id} result: {task_id * 2}")
 

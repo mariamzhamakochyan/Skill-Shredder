@@ -13,7 +13,7 @@ def fetch_webpage(url):
     return None
 
 if __name__ == "__main__":
-    url = "https://www.example.com"  # Replace this with the URL of the webpage you want to fetch
+    url = "https://www.example.com"  
     webpage_content = fetch_webpage(url)
 
     if webpage_content:
