@@ -21,10 +21,10 @@ class MRUCache:
                 del self.cache[mru_key]
             self.cache[key] = value
         self.access_history.append(key)
-mru_cache = MRUCache(3)
-mru_cache.put(1, 'One')
-mru_cache.put(2, 'Two')
-mru_cache.put(3, 'Three')
-print(mru_cache.get(1))  # Output: 'One'
-mru_cache.put(4, 'Four')
-print(mru_cache.get(3)) 
+mru= MRUCache(3)
+mru.put(1, 'One')
+mru.put(2, 'Two')
+mru.put(3, 'Three')
+print(mru.get(1)) 
+mru.put(4, 'Four')
+print(mru.get(3)) 
